@@ -49,10 +49,8 @@ function PullAllRepos ($basePath, $repoPrefix) {
 
     $repositories = GetAllRepoFolders
     
-    foreach ($repo in $repositories) 
-    {
-        if (!(IsRepo $repo)) 
-        {
+    foreach ($repo in $repositories) {
+        if (!(IsRepo $repo)) {
             continue;
         }
 

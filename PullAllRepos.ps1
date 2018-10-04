@@ -1,8 +1,8 @@
 param (
-    [string]$basePath = ".", # Repo locations
-    [string]$repoPrefix = "",
-    [string]$releaseBranchFolder = "release/", # e.g. release/
-    [string]$developBranch = "master" # e.g. master
+    [string]$basePath = ".", # Path of folder that contains repository files
+    [string]$repoPrefix = "", # Repository folders start with; if blank than all folders are taken
+    [string]$releaseBranchFolder = "release/", # All branches that are pushed automatically to production start with this. Main development branch will not be merged to this, but a warning will be outputed.
+    [string]$developBranch = "master" # This is the main development branch that will be pulled to currently checked out branches
 )
 
 function IsRepo ($repo) {

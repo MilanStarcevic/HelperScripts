@@ -32,7 +32,7 @@ function PullDevelopIfNotCurrentBranch ($currentBranch) {
             return
         }
 
-        Write-Host "** Pulling branch '$developBranch'" -foregroundcolor "Green"
+        Write-Host "** Pulling branch '$developBranch' and merging into current branch '$currentBranch'" -foregroundcolor "Green"
         git pull origin $developBranch
     } 
 }
